@@ -1,0 +1,4 @@
+<resources>
+  <string name="app_name">Mvp-template</string>
+  <string name="sharepreference_tag">myapppref</string>
+</resources>

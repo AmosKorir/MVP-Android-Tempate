@@ -1,0 +1,9 @@
+apply plugin: 'java-library'
+
+dependencies {
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+  implementation 'joda-time:joda-time:2.9.9'
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
