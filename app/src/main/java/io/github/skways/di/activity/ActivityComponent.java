@@ -2,6 +2,7 @@ package io.github.skways.di.activity;
 
 import dagger.Subcomponent;
 import io.github.skways.di.fragment.FragmentComponent;
+import io.github.skways.ui.activites.HomeActivity;
 
 /**
  * Created by Korir on 11/2/18.
@@ -11,7 +12,9 @@ public interface ActivityComponent {
 
   FragmentComponent.Builder fragmentBuilder();
 
-  @Subcomponent.Builder interface Builder{
+  void inject(HomeActivity homeActivity);
+
+  @Subcomponent.Builder interface Builder {
 
     Builder activityModule(ActivityModule activityModule);
 

@@ -26,6 +26,6 @@ public class MyApplication extends Application {
   }
 
   public ActivityComponent getActivityInjector(BaseActivity baseActivity) {
-    return (ActivityComponent) applicationComponent;
+    return (ActivityComponent) applicationComponent.activityComponentBuilder().activityModule(new ActivityModule(baseActivity)).build();
   }
 }
