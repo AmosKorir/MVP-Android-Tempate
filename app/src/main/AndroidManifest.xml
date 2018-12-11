@@ -2,46 +2,60 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="io.github.skways">
 
-    <uses-permission
-        android:name="android.permission.ACCESS_COARSE_LOCATION"
-        android:required="true" />
-    <uses-permission
-        android:name="android.permission.ACCESS_WIFI_STATE"
-        android:required="true" />
-    <uses-permission
-        android:name="android.permission.CHANGE_WIFI_STATE"
-        android:required="true" />
-    <uses-permission
-        android:name="android.permission.INTERNET"
-        android:required="true" />
+  <uses-permission
+      android:name="android.permission.ACCESS_COARSE_LOCATION"
+      android:required="true"/>
+  <uses-permission
+      android:name="android.permission.ACCESS_WIFI_STATE"
+      android:required="true"/>
+  <uses-permission
+      android:name="android.permission.CHANGE_WIFI_STATE"
+      android:required="true"/>
+  <uses-permission
+      android:name="android.permission.INTERNET"
+      android:required="true"/>
 
-    <application
-        android:name=".MyApplication"
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".ui.activites.SpashActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+  <application
+      android:name=".MyApplication"
+      android:allowBackup="true"
+      android:icon="@mipmap/ic_launcher"
+      android:label="@string/app_name"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:supportsRtl="true"
+      android:theme="@style/AppTheme">
+    <activity android:name=".ui.activites.SpashActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".ui.activites.HomeActivity" />
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+    <activity android:name=".ui.activites.HomeActivity"/>
 
-        <receiver
-            android:name=".ui.broadcastreceiver.MyWIFIReceiver"
-            android:enabled="true"
-            android:exported="true" />
+    <receiver
+        android:name=".ui.broadcastreceiver.MyWIFIReceiver"
+        android:enabled="true"
+        android:exported="true"/>
 
-        <activity
-            android:name=".ui.activites.Home"
-            android:label="@string/title_activity_home"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ui.activites.Client"></activity>
-    </application>
+    <activity
+        android:name=".ui.activites.Home"
+        android:label="@string/title_activity_home"
+        android:theme="@style/AppTheme.NoActionBar"/>
+    <activity android:name=".ui.activites.Client"/>
+    <activity
+        android:name=".ui.activites.ShowerActivity"
+        android:label="@string/title_activity_shower">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+    <activity
+        android:name=".ui.activites.DashBoard"
+        android:label="@string/title_activity_dash_board"
+        android:theme="@style/AppTheme.NoActionBar">
+    </activity>
+  </application>
 
 </manifest>

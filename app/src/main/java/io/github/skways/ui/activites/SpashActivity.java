@@ -12,6 +12,6 @@ public class SpashActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_spash);
 
-//    startActivity(new Intent(this,HomeActivity.class));
+    startActivity(new Intent(this,DashBoard.class));
   }
 }
